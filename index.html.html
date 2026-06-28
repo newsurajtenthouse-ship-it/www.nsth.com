@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Suraj Tent House & Rental Services | Harion, Sarlahi</title>
+<meta name="description" content="New Suraj Tent House & Rental Services - Premium wedding decoration, catering, sound systems & rental services in Sarlahi. Est. 2014. 400+ events completed.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --gold: #D4A017;
+    --gold-light: #F0C040;
+    --gold-dark: #A07010;
+    --crimson: #C0392B;
+    --crimson-light: #E74C3C;
+    --deep-purple: #1A0533;
+    --purple-mid: #2D0A5A;
+    --white: #FFFFFF;
+    --cream: #FDF6E3;
+    --text-dark: #1A0533;
+    --text-gray: #555;
+    --section-bg: #FFF9F0;
+    --shadow: 0 8px 32px rgba(26,5,51,0.15);
+    --shadow-gold: 0 4px 24px rgba(212,160,23,0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== LOADER ===== */
+  #loader {
+    position: fixed; inset: 0;
+    background: var(--deep-purple);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease;
+  }
+  #loader .loader-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    animation: pulse 1.5s ease infinite;
+  }
+  #loader .loader-bar {
+    width: 200px; height: 3px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  #loader .loader-fill {
+    height: 100%; width: 0;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    animation: loadfill 1.5s ease forwards;
+  }
+  @keyframes loadfill { to { width: 100%; } }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+
+  /* ===== LANGUAGE TOGGLE ===== */
+  .lang-bar {
+    position: fixed; top: 0; right: 0; left: 0;
+    background: var(--deep-purple);
+    z-index: 1000;
+    display: flex; justify-content: flex-end; align-items: center;
+    padding: 6px 20px; gap: 12px;
+    font-size: 0.78rem; color: rgba(255,255,255,0.7);
+  }
+  .lang-bar a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .lang-btn {
+    background: transparent; border: 1px solid var(--gold);
+    color: var(--gold); padding: 3px 10px; border-radius: 20px;
+    cursor: pointer; font-size: 0.75rem; font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+  }
+  .lang-btn.active, .lang-btn:hover { background: var(--gold); color: var(--deep-purple); font-weight: 600; }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed; top: 30px; left: 0; right: 0;
+    z-index: 999;
+    background: rgba(26,5,51,0.97);
+    backdrop-filter: blur(12px);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    transition: top 0.3s;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px; text-decoration: none;
+  }
+  .logo-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; color: var(--deep-purple);
+    box-shadow: 0 0 15px rgba(212,160,23,0.5);
+    flex-shrink: 0;
+  }
+  .logo-text { line-height: 1.2; }
+  .logo-text .l1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .logo-text .l2 {
+    font-size: 0.65rem; color: rgba(255,255,255,0.6);
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; gap: 28px; list-style: none; align-items: center;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85); text-decoration: none;
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px;
+    position: relative; padding-bottom: 4px;
+    transition: color 0.3s;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deep-purple) !important;
+    padding: 8px 20px !important;
+    border-radius: 25px !important;
+    font-weight: 700 !important;
+    transition: all 0.3s !important;
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+  .nav-cta::after { display: none !important; }
+
+  .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--gold); transition: all 0.3s; }
+
+  /* ===== HERO ===== */
+  #home {
+    min-height: 100vh;
+    background: 
+      linear-gradient(160deg, rgba(26,5,51,0.88) 0%, rgba(45,10,90,0.75) 40%, rgba(192,57,43,0.4) 100%),
+      url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=80') center/cover no-repeat;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 100px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Animated petals */
+  .petal { position: absolute; pointer-events: none; animation: fall linear infinite; opacity: 0.7; }
+  @keyframes fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(212,160,23,0.15);
+    border: 1px solid rgba(212,160,23,0.4);
+    color: var(--gold-light);
+    padding: 6px 20px; border-radius: 30px;
+    font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 0.8s ease;
+  }
+  .hero-badge i { font-size: 0.75rem; }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 0.9s ease 0.1s both;
+  }
+  .hero-title span { color: var(--gold); }
+
+  .hero-slogan {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.9s ease 0.2s both;
+  }
+
+  .hero-desc {
+    max-width: 650px; margin: 0 auto 2.5rem;
+    color: rgba(255,255,255,0.82);
+    font-size: 1rem; line-height: 1.8;
+    animation: fadeInUp 0.9s ease 0.3s both;
+  }
+
+  .hero-stats {
+    display: flex; justify-content: center; gap: 40px;
+    flex-wrap: wrap; margin-bottom: 2.5rem;
+    animation: fadeInUp 0.9s ease 0.4s both;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 900;
+    color: var(--gold);
+    display: block; line-height: 1;
+  }
+  .hero-stat .lbl { font-size: 0.72rem; color: rgba(255,255,255,0.65); letter-spacing: 1px; text-transform: uppercase; }
+
+  .hero-btns {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    animation: fadeInUp 0.9s ease 0.5s both;
+  }
+  .btn-gold {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deep-purple);
+    padding: 14px 32px; border-radius: 50px;
+    font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(212,160,23,0.4);
+  }
+  .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(212,160,23,0.5); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--white);
+    padding: 13px 32px; border-radius: 50px;
+    font-weight: 600; font-size: 0.95rem;
+    text-decoration: none; border: 2px solid rgba(255,255,255,0.5);
+    cursor: pointer; transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+
+  .btn-wa {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #25D366; color: white;
+    padding: 13px 28px; border-radius: 50px;
+    font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  }
+  .btn-wa:hover { background: #128C7E; transform: translateY(-3px); }
+
+  .scroll-indicator {
+    position: absolute; bottom: 30px; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 2px;
+    animation: bounce 2s ease infinite;
+    text-align: center;
+  }
+  .scroll-indicator i { display: block; font-size: 1.2rem; }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+  /* ===== SECTION COMMONS ===== */
+  section { padding: 90px 5%; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .section-eyebrow::before, .section-eyebrow::after {
+    content: '— '; color: rgba(212,160,23,0.5);
+  }
+  .section-eyebrow::after { content: ' —'; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700; line-height: 1.2;
+    color: var(--deep-purple);
+    margin-bottom: 16px;
+  }
+  .section-title span { color: var(--crimson); }
+  .section-sub {
+    color: var(--text-gray); max-width: 600px; margin: 0 auto;
+    line-height: 1.7; font-size: 0.95rem;
+  }
+  .gold-line {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px; margin: 16px auto 0;
+  }
+
+  /* ===== MARQUEE TICKER ===== */
+  .ticker-wrap {
+    background: linear-gradient(90deg, var(--crimson), var(--gold-dark));
+    padding: 12px 0; overflow: hidden;
+    position: relative;
+  }
+  .ticker {
+    display: flex; gap: 60px;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+  .ticker span {
+    color: white; font-size: 0.85rem; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .ticker span i { color: var(--gold-light); }
+  @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+  /* ===== ABOUT ===== */
+  #about { background: var(--section-bg); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;
+  }
+  .about-img-wrap { position: relative; }
+  .about-img-main {
+    width: 100%; border-radius: 16px;
+    height: 450px; object-fit: cover;
+    box-shadow: var(--shadow);
+  }
+  .about-img-badge {
+    position: absolute; bottom: -20px; right: -20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deep-purple); border-radius: 12px;
+    padding: 16px 20px; text-align: center;
+    box-shadow: var(--shadow-gold);
+  }
+  .about-img-badge .big { font-size: 2rem; font-weight: 900; font-family: 'Playfair Display', serif; display: block; }
+  .about-img-badge .sm { font-size: 0.7rem; font-weight: 600; letter-spacing: 1px; }
+
+  .about-content { }
+  .about-content .section-title { text-align: left; }
+  .about-content .gold-line { margin: 16px 0; }
+  .about-content p { color: var(--text-gray); line-height: 1.8; margin-bottom: 16px; }
+
+  .about-list { list-style: none; margin: 20px 0; }
+  .about-list li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0; color: var(--text-dark); font-weight: 500;
+    border-bottom: 1px solid rgba(212,160,23,0.15);
+  }
+  .about-list li i { color: var(--gold); width: 20px; }
+
+  .owner-card {
+    display: flex; align-items: center; gap: 16px;
+    background: linear-gradient(135deg, var(--deep-purple), var(--purple-mid));
+    border-radius: 12px; padding: 16px 20px; margin-top: 24px;
+  }
+  .owner-avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; color: var(--deep-purple); flex-shrink: 0;
+  }
+  .owner-info .name { color: var(--gold); font-weight: 700; font-size: 1rem; }
+  .owner-info .title { color: rgba(255,255,255,0.65); font-size: 0.78rem; }
+  .owner-info .pan { color: rgba(255,255,255,0.5); font-size: 0.72rem; margin-top: 2px; }
+
+  /* ===== SERVICES ===== */
+  #services { background: var(--white); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px; max-width: 1200px; margin: 0 auto;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: 16px; overflow: hidden;
+    box-shadow: 0 4px 20px rgba(26,5,51,0.08);
+    transition: all 0.4s;
+    border: 1px solid rgba(212,160,23,0.1);
+    position: relative;
+  }
+  .service-card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(26,5,51,0.15); }
+  .service-card:hover .svc-overlay { opacity: 1; }
+
+  .svc-img { width: 100%; height: 220px; object-fit: cover; }
+  .svc-overlay {
+    position: absolute; inset: 0; height: 220px;
+    background: linear-gradient(to top, rgba(26,5,51,0.9) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.4s;
+    display: flex; align-items: flex-end; padding: 16px;
+  }
+  .svc-overlay-text { color: var(--gold-light); font-size: 0.8rem; }
+
+  .svc-body { padding: 24px; }
+  .svc-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--deep-purple), var(--purple-mid));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .svc-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--deep-purple); margin-bottom: 8px; }
+  .svc-desc { color: var(--text-gray); font-size: 0.875rem; line-height: 1.7; }
+
+  /* ===== GALLERY ===== */
+  #gallery { background: var(--deep-purple); }
+  #gallery .section-title { color: var(--white); }
+  #gallery .section-sub { color: rgba(255,255,255,0.6); }
+
+  .gallery-tabs {
+    display: flex; justify-content: center; gap: 10px;
+    flex-wrap: wrap; margin-bottom: 36px;
+  }
+  .tab-btn {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7); padding: 8px 20px; border-radius: 25px;
+    font-size: 0.82rem; cursor: pointer; transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--gold); border-color: var(--gold);
+    color: var(--deep-purple); font-weight: 600;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 12px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .gallery-item {
+    border-radius: 10px; overflow: hidden; position: relative; cursor: pointer;
+  }
+  .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .gallery-item:nth-child(6) { grid-column: span 2; }
+  .gallery-item:nth-child(9) { grid-column: span 2; }
+
+  .g-img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .gallery-item:hover .g-img { transform: scale(1.08); }
+  .g-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(26,5,51,0.85) 0%, transparent 50%);
+    opacity: 0; transition: opacity 0.3s;
+    display: flex; align-items: flex-end; padding: 16px;
+  }
+  .gallery-item:hover .g-overlay { opacity: 1; }
+  .g-label { color: var(--gold-light); font-size: 0.85rem; font-weight: 600; }
+
+  /* ===== PACKAGES ===== */
+  #packages { background: linear-gradient(135deg, var(--cream), #FFF0F5); }
+  .packages-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px; max-width: 1100px; margin: 0 auto;
+  }
+  .pkg-card {
+    border-radius: 20px; overflow: hidden;
+    position: relative; transition: all 0.4s;
+    box-shadow: 0 8px 30px rgba(26,5,51,0.1);
+  }
+  .pkg-card:hover { transform: translateY(-10px); }
+  .pkg-card.featured { transform: scale(1.03); }
+  .pkg-card.featured:hover { transform: scale(1.03) translateY(-10px); }
+
+  .pkg-header {
+    padding: 32px 28px; text-align: center; position: relative;
+  }
+  .pkg-card.basic .pkg-header { background: linear-gradient(135deg, #4A1A8C, #6B2FA0); }
+  .pkg-card.standard .pkg-header { background: linear-gradient(135deg, var(--crimson), #E74C3C); }
+  .pkg-card.premium .pkg-header { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+
+  .pkg-badge {
+    position: absolute; top: 16px; right: 16px;
+    background: rgba(255,255,255,0.2); color: white;
+    padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600;
+  }
+  .pkg-icon { font-size: 2rem; margin-bottom: 12px; }
+  .pkg-name { color: white; font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+  .pkg-desc { color: rgba(255,255,255,0.75); font-size: 0.82rem; }
+  .pkg-price { margin-top: 16px; }
+  .pkg-price .from { color: rgba(255,255,255,0.6); font-size: 0.75rem; }
+  .pkg-price .amount { color: white; font-size: 1.8rem; font-weight: 800; font-family: 'Playfair Display', serif; }
+
+  .pkg-body { background: white; padding: 28px; }
+  .pkg-features { list-style: none; }
+  .pkg-features li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0; border-bottom: 1px solid #F5F0FF;
+    font-size: 0.875rem; color: var(--text-dark);
+  }
+  .pkg-features li:last-child { border: none; }
+  .pkg-features li i { color: var(--gold); font-size: 0.8rem; }
+  .pkg-cta {
+    display: block; text-align: center; margin-top: 20px;
+    padding: 12px; border-radius: 10px; font-weight: 600; font-size: 0.9rem;
+    text-decoration: none; transition: all 0.3s;
+    cursor: pointer; border: none; width: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  .basic .pkg-cta { background: linear-gradient(135deg, #4A1A8C, #6B2FA0); color: white; }
+  .standard .pkg-cta { background: linear-gradient(135deg, var(--crimson), #E74C3C); color: white; }
+  .premium .pkg-cta { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: var(--deep-purple); }
+  .pkg-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+
+  /* ===== EVENTS ===== */
+  #events { background: var(--section-bg); }
+  .events-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px; max-width: 900px; margin: 0 auto;
+  }
+  .event-chip {
+    background: white; border-radius: 14px; padding: 24px 16px;
+    text-align: center; box-shadow: 0 4px 16px rgba(26,5,51,0.08);
+    transition: all 0.3s; border: 2px solid transparent;
+    cursor: default;
+  }
+  .event-chip:hover {
+    border-color: var(--gold); transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+  }
+  .event-chip i { font-size: 2rem; color: var(--crimson); display: block; margin-bottom: 10px; }
+  .event-chip span { font-size: 0.85rem; font-weight: 600; color: var(--deep-purple); }
+
+  /* ===== TESTIMONIALS ===== */
+  #testimonials { background: var(--deep-purple); overflow: hidden; }
+  #testimonials .section-title { color: white; }
+  #testimonials .section-sub { color: rgba(255,255,255,0.6); }
+
+  .reviews-slider { max-width: 1100px; margin: 0 auto; position: relative; }
+  .reviews-track {
+    display: flex; gap: 24px;
+    animation: slideReviews 20s linear infinite;
+  }
+  .reviews-track:hover { animation-play-state: paused; }
+  @keyframes slideReviews {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .review-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 28px; min-width: 300px; max-width: 300px;
+    flex-shrink: 0;
+  }
+  .stars { color: var(--gold); font-size: 1rem; margin-bottom: 12px; }
+  .review-text { color: rgba(255,255,255,0.8); font-size: 0.875rem; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+  .reviewer { display: flex; align-items: center; gap: 10px; }
+  .reviewer-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--deep-purple); font-weight: 700; font-size: 0.85rem;
+  }
+  .reviewer-name { color: var(--gold-light); font-weight: 600; font-size: 0.9rem; }
+  .reviewer-event { color: rgba(255,255,255,0.4); font-size: 0.72rem; }
+
+  /* ===== CALENDAR ===== */
+  #availability { background: var(--white); }
+  .avail-wrap { max-width: 900px; margin: 0 auto; }
+  .cal-header {
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(135deg, var(--deep-purple), var(--purple-mid));
+    padding: 20px 28px; border-radius: 16px 16px 0 0;
+    color: white;
+  }
+  .cal-month { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; }
+  .cal-nav { background: rgba(255,255,255,0.15); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
+  .cal-nav:hover { background: rgba(255,255,255,0.25); }
+  .cal-grid { background: white; border: 1px solid #EEE; border-top: none; border-radius: 0 0 16px 16px; padding: 20px; }
+  .cal-days-header {
+    display: grid; grid-template-columns: repeat(7, 1fr);
+    text-align: center; font-size: 0.75rem; font-weight: 600; color: var(--text-gray);
+    margin-bottom: 8px;
+  }
+  .cal-days {
+    display: grid; grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  .cal-day {
+    aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+    border-radius: 8px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
+    font-weight: 500;
+  }
+  .cal-day:hover:not(.booked):not(.empty) { background: rgba(212,160,23,0.15); color: var(--gold-dark); }
+  .cal-day.today { background: var(--deep-purple); color: white; }
+  .cal-day.booked { background: rgba(192,57,43,0.12); color: var(--crimson); position: relative; }
+  .cal-day.booked::after { content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background: var(--crimson); border-radius: 50%; }
+  .cal-day.empty { pointer-events: none; }
+  .cal-day.available { background: rgba(46,204,113,0.1); color: #27AE60; }
+
+  .cal-legend { display: flex; gap: 20px; margin-top: 16px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--text-gray); }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+
+  /* ===== BOOKING FORM ===== */
+  #booking { background: linear-gradient(135deg, var(--cream), #FFF0E8); }
+  .booking-wrap { max-width: 800px; margin: 0 auto; }
+  .booking-form {
+    background: white; border-radius: 20px; padding: 48px;
+    box-shadow: 0 12px 48px rgba(26,5,51,0.12);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1/-1; }
+  .form-label { font-size: 0.82rem; font-weight: 600; color: var(--deep-purple); }
+  .form-input, .form-select, .form-textarea {
+    padding: 12px 16px; border: 2px solid #E8E0F0; border-radius: 10px;
+    font-family: 'Poppins', sans-serif; font-size: 0.875rem; color: var(--text-dark);
+    transition: border-color 0.3s, box-shadow 0.3s; outline: none;
+    background: #FAFAFA;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,160,23,0.1);
+    background: white;
+  }
+  .form-textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px;
+  }
+  .submit-btn {
+    flex: 1; min-width: 180px; padding: 14px; border-radius: 12px;
+    font-weight: 700; font-size: 0.95rem; cursor: pointer;
+    border: none; font-family: 'Poppins', sans-serif;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    transition: all 0.3s;
+  }
+  .submit-btn.primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deep-purple);
+  }
+  .submit-btn.primary:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+  .submit-btn.wa { background: #25D366; color: white; }
+  .submit-btn.wa:hover { background: #128C7E; transform: translateY(-2px); }
+  .submit-btn.call { background: linear-gradient(135deg, var(--deep-purple), var(--purple-mid)); color: white; }
+  .submit-btn.call:hover { transform: translateY(-2px); }
+
+  /* ===== INFO CARDS ===== */
+  #contact { background: var(--section-bg); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 40px; max-width: 1100px; margin: 0 auto;
+  }
+  .info-cards { display: flex; flex-direction: column; gap: 16px; }
+  .info-card {
+    background: white; border-radius: 14px; padding: 20px 24px;
+    display: flex; align-items: flex-start; gap: 16px;
+    box-shadow: 0 4px 16px rgba(26,5,51,0.07);
+    transition: box-shadow 0.3s;
+  }
+  .info-card:hover { box-shadow: 0 8px 30px rgba(26,5,51,0.12); }
+  .info-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--deep-purple), var(--purple-mid));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: 1.1rem; flex-shrink: 0;
+  }
+  .info-text .label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .info-text .val { color: var(--text-dark); font-weight: 600; font-size: 0.9rem; }
+  .info-text .sub { color: var(--text-gray); font-size: 0.78rem; margin-top: 2px; }
+  .info-text a { color: var(--deep-purple); text-decoration: none; }
+  .info-text a:hover { color: var(--gold-dark); }
+
+  .map-wrap { border-radius: 16px; overflow: hidden; height: 100%; min-height: 400px; box-shadow: var(--shadow); }
+  .map-wrap iframe { width: 100%; height: 100%; min-height: 400px; border: none; }
+
+  /* ===== SOCIAL / CTA BAND ===== */
+  .social-band {
+    background: linear-gradient(135deg, var(--deep-purple), var(--purple-mid));
+    padding: 60px 5%; text-align: center;
+  }
+  .social-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    color: white; margin-bottom: 8px;
+  }
+  .social-sub { color: rgba(255,255,255,0.6); margin-bottom: 32px; font-size: 0.95rem; }
+  .social-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .social-link {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 24px; border-radius: 12px;
+    font-weight: 600; font-size: 0.9rem; text-decoration: none;
+    transition: all 0.3s;
+  }
+  .fb-link { background: #1877F2; color: white; }
+  .fb-link:hover { background: #0e5fc2; transform: translateY(-2px); }
+  .yt-link { background: #FF0000; color: white; }
+  .yt-link:hover { background: #cc0000; transform: translateY(-2px); }
+  .wa-link { background: #25D366; color: white; }
+  .wa-link:hover { background: #128C7E; transform: translateY(-2px); }
+  .mail-link { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; }
+  .mail-link:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0D0220; color: rgba(255,255,255,0.6);
+    padding: 50px 5% 24px;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px; margin-bottom: 40px;
+  }
+  .footer-brand .logo-icon { margin-bottom: 16px; }
+  .footer-brand .name {
+    font-family: 'Playfair Display', serif;
+    color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;
+  }
+  .footer-brand .slogan { color: var(--gold); font-size: 0.82rem; font-style: italic; margin-bottom: 12px; }
+  .footer-brand p { font-size: 0.82rem; line-height: 1.7; }
+
+  .footer-col h4 { color: var(--gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 8px; }
+  .footer-col ul li a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.83rem; transition: color 0.3s; }
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px; text-align: center;
+    font-size: 0.78rem; color: rgba(255,255,255,0.4);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+
+  /* ===== FLOATING BUTTONS ===== */
+  .float-buttons {
+    position: fixed; bottom: 28px; right: 20px;
+    display: flex; flex-direction: column; gap: 12px; z-index: 800;
+  }
+  .float-btn {
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 1.3rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+  }
+  .float-btn:hover { transform: scale(1.1) translateY(-2px); }
+  .float-wa { background: #25D366; color: white; }
+  .float-call { background: var(--gold); color: var(--deep-purple); }
+  .float-top { background: var(--deep-purple); color: var(--gold); font-size: 1rem; }
+
+  /* ===== NOTIFICATION ===== */
+  .notification {
+    position: fixed; top: 110px; right: 20px;
+    background: #25D366; color: white;
+    padding: 12px 20px; border-radius: 12px;
+    font-size: 0.85rem; font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 2000; display: none;
+    animation: slideIn 0.3s ease;
+  }
+  @keyframes slideIn { from{transform:translateX(100%);opacity:0} to{transform:translateX(0);opacity:1} }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes fadeInDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== MOBILE NAV ===== */
+  .mobile-menu {
+    display: none; position: fixed; top: 100px; left: 0; right: 0;
+    background: var(--deep-purple); padding: 20px;
+    z-index: 998; flex-direction: column; gap: 4px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  }
+  .mobile-menu a {
+    color: rgba(255,255,255,0.85); text-decoration: none;
+    padding: 12px 16px; border-radius: 8px; font-size: 0.9rem;
+    display: block; transition: all 0.3s;
+  }
+  .mobile-menu a:hover { background: rgba(255,255,255,0.08); color: var(--gold); }
+  .mobile-menu.open { display: flex; }
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width: 1024px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media(max-width: 768px) {
+    nav { padding: 0 4%; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-img-badge { right: 0; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+    .gallery-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
+    .gallery-item:nth-child(6), .gallery-item:nth-child(9) { grid-column: span 1; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .hero-stats { gap: 24px; }
+    section { padding: 70px 4%; }
+    .booking-form { padding: 28px; }
+  }
+
+  @media(max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .events-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ===== NEPALI TEXT TOGGLE ===== */
+  [data-np] { display: none; }
+  body.nepali [data-en] { display: none; }
+  body.nepali [data-np] { display: block; }
+  body.nepali .np-inline { display: inline !important; }
+  .np-inline { display: none; }
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">🌸 New Suraj Tent House</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- NOTIFICATION -->
+<div class="notification" id="notif">✓ Message sent to WhatsApp!</div>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span>📍 Harion-11, Sarlahi | ☎ 9815886947 / 9844032737</span>
+  <button class="lang-btn active" id="btnEn" onclick="setLang('en')">English</button>
+  <button class="lang-btn" id="btnNp" onclick="setLang('np')">नेपाली</button>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="logo-icon">🌸</div>
+    <div class="logo-text">
+      <div class="l1">New Suraj Tent House</div>
+      <div class="l2">& Rental Services · Est. 2014</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#booking" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="toggleMenu()">🏠 Home</a>
+  <a href="#about" onclick="toggleMenu()">ℹ️ About Us</a>
+  <a href="#services" onclick="toggleMenu()">⭐ Services</a>
+  <a href="#gallery" onclick="toggleMenu()">📸 Gallery</a>
+  <a href="#packages" onclick="toggleMenu()">💎 Packages</a>
+  <a href="#testimonials" onclick="toggleMenu()">💬 Reviews</a>
+  <a href="#availability" onclick="toggleMenu()">📅 Availability</a>
+  <a href="#contact" onclick="toggleMenu()">📍 Contact</a>
+  <a href="#booking" onclick="toggleMenu()" style="background:var(--gold);color:var(--deep-purple);font-weight:700;margin-top:8px;">🎉 Book Now</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <!-- Floating petals -->
+  <div id="petals"></div>
+
+  <div>
+    <div class="hero-badge" data-en>
+      <i class="fas fa-crown"></i>
+      Established 2014 · 12 Years of Excellence
+      <i class="fas fa-crown"></i>
+    </div>
+    <div class="hero-badge" data-np style="display:none">
+      <i class="fas fa-crown"></i>
+      सन् २०१४ देखि स्थापित · १२ वर्षको अनुभव
+      <i class="fas fa-crown"></i>
+    </div>
+
+    <h1 class="hero-title" data-en>
+      New <span>Suraj</span> Tent House<br>&amp; Rental Services
+    </h1>
+    <h1 class="hero-title" data-np style="display:none">
+      न्यू <span>सूरज</span> टेन्ट हाउस<br>एण्ड रेन्टल सर्भिसेज
+    </h1>
+
+    <p class="hero-slogan">✨ Turning Moments into Memories ✨</p>
+
+    <p class="hero-desc" data-en>
+      Sarlahi's most trusted event planning & decoration service. From grand weddings to intimate celebrations — we make every event unforgettable with stunning setups, premium catering & professional sound systems.
+    </p>
+    <p class="hero-desc" data-np style="display:none">
+      सर्लाहीको सबैभन्दा विश्वसनीय इभेन्ट प्लानिङ र सजावट सेवा। विवाहदेखि जन्मदिनसम्म — हामी हरेक अवसरलाई अविस्मरणीय बनाउँछौं।
+    </p>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="num" id="cnt1">0</span>
+        <span class="lbl">Events Done</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num" id="cnt2">0</span>
+        <span class="lbl">Years Experience</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num" id="cnt3">0</span>
+        <span class="lbl">High-Profile Events</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">20+</span>
+        <span class="lbl">Team Members</span>
+      </div>
+    </div>
+
+    <div class="hero-btns">
+      <a href="#booking" class="btn-gold">
+        <i class="fas fa-calendar-check"></i> Book Your Event
+      </a>
+      <a href="https://wa.me/9779815886947?text=Hello!%20I'm%20interested%20in%20booking%20your%20services." target="_blank" class="btn-wa">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+      <a href="tel:+9779815886947" class="btn-outline">
+        <i class="fas fa-phone"></i> Call Now
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <i class="fas fa-chevron-down"></i>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <span><i class="fas fa-ring"></i> Wedding Decorations</span>
+    <span><i class="fas fa-music"></i> DJ & Sound Systems</span>
+    <span><i class="fas fa-utensils"></i> Catering Services</span>
+    <span><i class="fas fa-birthday-cake"></i> Birthday Parties</span>
+    <span><i class="fas fa-camera"></i> Photography Available</span>
+    <span><i class="fas fa-truck"></i> Serving All Sarlahi District</span>
+    <span><i class="fas fa-star"></i> 400+ Events Completed</span>
+    <span><i class="fas fa-praying-hands"></i> Bratabandha & Pasni</span>
+    <span><i class="fas fa-gem"></i> Reception & Engagement</span>
+    <span><i class="fas fa-ring"></i> Wedding Decorations</span>
+    <span><i class="fas fa-music"></i> DJ & Sound Systems</span>
+    <span><i class="fas fa-utensils"></i> Catering Services</span>
+    <span><i class="fas fa-birthday-cake"></i> Birthday Parties</span>
+    <span><i class="fas fa-camera"></i> Photography Available</span>
+    <span><i class="fas fa-truck"></i> Serving All Sarlahi District</span>
+    <span><i class="fas fa-star"></i> 400+ Events Completed</span>
+    <span><i class="fas fa-praying-hands"></i> Bratabandha & Pasni</span>
+    <span><i class="fas fa-gem"></i> Reception & Engagement</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <img
+        src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80"
+        alt="Elegant Wedding Decoration"
+        class="about-img-main"
+      >
+      <div class="about-img-badge">
+        <span class="big">12+</span>
+        <span class="sm">Years of<br>Experience</span>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <div class="section-eyebrow">About Us</div>
+      <h2 class="section-title" data-en>Crafting <span>Dream Events</span><br>Since 2014</h2>
+      <h2 class="section-title" data-np style="display:none">सन् २०१४ देखि <span>सपनाका कार्यक्रम</span><br>बनाउँदै आएका छौं</h2>
+      <div class="gold-line"></div>
+
+      <p data-en>Welcome to <strong>New Suraj Tent House & Rental Services</strong> — Sarlahi's premier event planning, decoration, and rental company. Founded in 2014 by <strong>Dharmendra Chaudhary</strong>, we have proudly served the people of Harion and across the Sarlahi District for over 12 years.</p>
+      <p data-en>With a dedicated team of 20+ professionals, we specialize in transforming venues into breathtaking spaces. From traditional Nepali ceremonies to modern celebrations, every event receives our full passion and attention to detail.</p>
+      <p data-np style="display:none">न्यू सूरज टेन्ट हाउस एण्ड रेन्टल सर्भिसेजमा स्वागत छ। धर्मेन्द्र चौधरीको नेतृत्वमा सन् २०१४ मा स्थापित, हामी सर्लाहीको सर्वश्रेष्ठ इभेन्ट प्लानिङ कम्पनी हौं। हाम्रा २०+ पेशेवर टोलीले हरेक कार्यक्रमलाई यादगार बनाउँछ।</p>
+
+      <ul class="about-list">
+        <li><i class="fas fa-check-circle"></i> 400+ Events Successfully Completed</li>
+        <li><i class="fas fa-check-circle"></i> 160+ High-Profile Events Handled</li>
+        <li><i class="fas fa-check-circle"></i> Serving Sarlahi District & Beyond</li>
+        <li><i class="fas fa-check-circle"></i> Partner Photographer: Jotjee Photo & Videography</li>
+        <li><i class="fas fa-check-circle"></i> Open 7 Days · 7AM to 8PM</li>
+        <li><i class="fas fa-check-circle"></i> Business Hours: Sunday to Sunday</li>
+      </ul>
+
+      <div class="owner-card">
+        <div class="owner-avatar"><i class="fas fa-user-tie"></i></div>
+        <div class="owner-info">
+          <div class="name">Dharmendra Chaudhary</div>
+          <div class="title">Founder & Owner · Est. 2014</div>
+          <div class="pan">Business PAN: Registered · Harion-11, Sarlahi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">What We Offer</div>
+    <h2 class="section-title" data-en>Our Premium <span>Services</span></h2>
+    <h2 class="section-title" data-np style="display:none">हाम्रा उत्कृष्ट <span>सेवाहरू</span></h2>
+    <div class="gold-line"></div>
+    <p class="section-sub" data-en>From grand weddings to intimate gatherings — we cover every detail to make your celebration perfect.</p>
+    <p class="section-sub" data-np style="display:none">विवाहदेखि साना उत्सवसम्म — हामी हरेक विवरणमा ध्यान दिन्छौं।</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding Stage Setup" class="svc-img">
+      <div class="svc-overlay"><div class="svc-overlay-text">Stunning floral & lighting arrangements</div></div>
+      <div class="svc-body">
+        <div class="svc-icon"><i class="fas fa-ring"></i></div>
+        <div class="svc-title">Wedding Stage Setup</div>
+        <div class="svc-desc">Breathtaking stage decorations with floral arrangements, lighting, drapes, and backdrops tailored to your dream wedding.</div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Mandap Setup" class="svc-img">
+      <div class="svc-overlay"><div class="svc-overlay-text">Traditional & modern mandap designs</div></div>
+      <div class="svc-body">
+        <div class="svc-icon"><i class="fas fa-om"></i></div>
+        <div class="svc-title">Mandap Setup</div>
+        <div class="svc-desc">Beautifully crafted mandap setups for traditional Hindu ceremonies, designed with sacred aesthetics and floral decor.</div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80" alt="DJ & Sound System" class="svc-img">
+      <div class="svc-overlay"><div class="svc-overlay-text">Professional DJ & audio equipment</div></div>
+      <div class="svc-body">
+        <div class="svc-icon"><i class="fas fa-music"></i></div>
+        <div class="svc-title">DJ & Sound System</div>
+        <div class="svc-desc">High-quality DJ equipment, PA systems, microphones, and professional audio setup to keep your celebration lively.</div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Catering Services" class="svc-img">
+      <div class="svc-overlay"><div class="svc-overlay-text">Delicious food for all occasions</div></div>
+      <div class="svc-body">
+        <div class="svc-icon"><i class="fas fa-utensils"></i></div>
+        <div class="svc-title">Catering Services</div>
+        <div class="svc-desc">Delicious traditional Nepali and multi-cuisine catering. Fresh, hygienic food prepared by experienced chefs for all events.</div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Birthday Party Setup" class="svc-img">
+      <div class="svc-overlay"><div class="svc-overlay-text">Colorful & fun birthday setups</div></div>
+      <div class="svc-body">
+        <div class="svc-icon"><i class="fas fa-birthday-cake"></i></div>
+        <div class="svc-title">Birthday Party Setup</div>
+        <div class="svc-desc">Creative and colorful birthday party decorations with balloons, backdrops, thematic setups, and cake tables.</div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Rental Services" class="svc-img">
+      <div class="svc-overlay"><div class="svc-overlay-text">Chairs, tables, tents & more</div></div>
+      <div class="svc-body">
+        <div class="svc-icon"><i class="fas fa-warehouse"></i></div>
+        <div class="svc-title">Rental Services</div>
+        <div class="svc-desc">Wide range of rental equipment including chairs, tables, tents, generators, lighting, crockery, and more for any event.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header">
+    <div class="section-eyebrow" style="color:var(--gold)">Our Work</div>
+    <h2 class="section-title" data-en>Event <span style="color:var(--gold)">Gallery</span></h2>
+    <h2 class="section-title" data-np style="display:none">हाम्रो <span style="color:var(--gold)">ग्यालरी</span></h2>
+    <div class="gold-line"></div>
+    <p class="section-sub" data-en>Glimpses from 400+ events we've beautifully crafted across Sarlahi and beyond.</p>
+    <p class="section-sub" data-np style="display:none">सर्लाही र बाहिर हामीले सजाएका ४०० भन्दा बढी कार्यक्रमका झलकहरू।</p>
+  </div>
+
+  <div class="gallery-tabs">
+    <button class="tab-btn active" onclick="filterGallery('all', this)">All Events</button>
+    <button class="tab-btn" onclick="filterGallery('wedding', this)">Weddings</button>
+    <button class="tab-btn" onclick="filterGallery('birthday', this)">Birthdays</button>
+    <button class="tab-btn" onclick="filterGallery('reception', this)">Reception</button>
+    <button class="tab-btn" onclick="filterGallery('cultural', this)">Cultural</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item" data-cat="wedding">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding Stage" class="g-img">
+      <div class="g-overlay"><span class="g-label">💍 Grand Wedding Stage</span></div>
+    </div>
+    <div class="gallery-item" data-cat="wedding">
+      <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt="Wedding Decor" class="g-img">
+      <div class="g-overlay"><span class="g-label">🌸 Wedding Decoration</span></div>
+    </div>
+    <div class="gallery-item" data-cat="cultural">
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Mandap" class="g-img">
+      <div class="g-overlay"><span class="g-label">🕉 Mandap Setup</span></div>
+    </div>
+    <div class="gallery-item" data-cat="wedding">
+      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&q=80" alt="Wedding Flowers" class="g-img">
+      <div class="g-overlay"><span class="g-label">🌹 Floral Decoration</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Birthday" class="g-img">
+      <div class="g-overlay"><span class="g-label">🎂 Birthday Party</span></div>
+    </div>
+    <div class="gallery-item" data-cat="reception">
+      <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80" alt="Reception" class="g-img">
+      <div class="g-overlay"><span class="g-label">✨ Reception Event</span></div>
+    </div>
+    <div class="gallery-item" data-cat="wedding">
+      <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="DJ Setup" class="g-img">
+      <div class="g-overlay"><span class="g-label">🎵 DJ & Sound</span></div>
+    </div>
+    <div class="gallery-item" data-cat="birthday">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Party" class="g-img">
+      <div class="g-overlay"><span class="g-label">🎉 Celebration</span></div>
+    </div>
+    <div class="gallery-item" data-cat="cultural">
+      <img src="https://images.unsplash.com/photo-1455594006452-a8e79ef26c99?w=800&q=80" alt="Cultural" class="g-img">
+      <div class="g-overlay"><span class="g-label">🙏 Cultural Event</span></div>
+    </div>
+    <div class="gallery-item" data-cat="reception">
+      <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=600&q=80" alt="Catering" class="g-img">
+      <div class="g-overlay"><span class="g-label">🍽 Catering Service</span></div>
+    </div>
+    <div class="gallery-item" data-cat="wedding">
+      <img src="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?w=600&q=80" alt="Wedding Night" class="g-img">
+      <div class="g-overlay"><span class="g-label">💫 Wedding Night</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-header">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title" data-en>Choose Your <span>Package</span></h2>
+    <h2 class="section-title" data-np style="display:none">आफ्नो <span>प्याकेज</span> छान्नुहोस्</h2>
+    <div class="gold-line"></div>
+    <p class="section-sub" data-en>Flexible packages designed for every celebration — from intimate gatherings to grand weddings.</p>
+    <p class="section-sub" data-np style="display:none">सानो उत्सवदेखि भव्य विवाहसम्म सबैका लागि उपयुक्त प्याकेजहरू।</p>
+  </div>
+
+  <div class="packages-grid">
+    <!-- BASIC -->
+    <div class="pkg-card basic reveal">
+      <div class="pkg-header">
+        <div class="pkg-badge">Starter</div>
+        <div class="pkg-icon">🌟</div>
+        <div class="pkg-name">Basic Package</div>
+        <div class="pkg-desc">For Tiny Celebrations</div>
+        <div class="pkg-price">
+          <span class="from">Starting from</span>
+          <div class="amount">Rs 15,000 – 30,000</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <ul class="pkg-features">
+          <li><i class="fas fa-check"></i> Basic Stage / Tent Setup</li>
+          <li><i class="fas fa-check"></i> Simple Floral Decoration</li>
+          <li><i class="fas fa-check"></i> Basic Sound System</li>
+          <li><i class="fas fa-check"></i> Chairs & Tables (50 pax)</li>
+          <li><i class="fas fa-check"></i> Basic Lighting</li>
+          <li><i class="fas fa-check"></i> 1 Team Coordinator</li>
+          <li><i class="fas fa-check"></i> Suitable for: Pasni, Small Parties</li>
+        </ul>
+        <button class="pkg-cta" onclick="openWhatsApp('Basic Package (Rs 15,000-30,000)')">
+          <i class="fab fa-whatsapp"></i> Book This Package
+        </button>
+      </div>
+    </div>
+
+    <!-- STANDARD -->
+    <div class="pkg-card standard featured reveal">
+      <div class="pkg-header">
+        <div class="pkg-badge">⭐ Popular</div>
+        <div class="pkg-icon">🌺</div>
+        <div class="pkg-name">Standard Package</div>
+        <div class="pkg-desc">For Casual Occasions</div>
+        <div class="pkg-price">
+          <span class="from">Starting from</span>
+          <div class="amount">Rs 35,000 – 60,000</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <ul class="pkg-features">
+          <li><i class="fas fa-check"></i> Decorated Wedding Stage</li>
+          <li><i class="fas fa-check"></i> Full Floral & Drape Decoration</li>
+          <li><i class="fas fa-check"></i> DJ + Sound System</li>
+          <li><i class="fas fa-check"></i> Chairs & Tables (150 pax)</li>
+          <li><i class="fas fa-check"></i> LED Lighting & Fairy Lights</li>
+          <li><i class="fas fa-check"></i> Basic Catering Arrangement</li>
+          <li><i class="fas fa-check"></i> 3 Team Coordinators</li>
+          <li><i class="fas fa-check"></i> For: Birthday, Reception, Engagement</li>
+        </ul>
+        <button class="pkg-cta" onclick="openWhatsApp('Standard Package (Rs 35,000-60,000)')">
+          <i class="fab fa-whatsapp"></i> Book This Package
+        </button>
+      </div>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="pkg-card premium reveal">
+      <div class="pkg-header">
+        <div class="pkg-badge">👑 Luxury</div>
+        <div class="pkg-icon">💎</div>
+        <div class="pkg-name">Premium Package</div>
+        <div class="pkg-desc">For Your Special Occasion</div>
+        <div class="pkg-price">
+          <span class="from">Starting from</span>
+          <div class="amount">Rs 65,000+ (Custom)</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <ul class="pkg-features">
+          <li><i class="fas fa-check"></i> Grand Luxury Wedding Stage</li>
+          <li><i class="fas fa-check"></i> Premium Floral & Theme Decor</li>
+          <li><i class="fas fa-check"></i> Professional DJ + Full Sound</li>
+          <li><i class="fas fa-check"></i> Full Catering Service</li>
+          <li><i class="fas fa-check"></i> Unlimited Seating Setup</li>
+          <li><i class="fas fa-check"></i> LED/Fog/Laser Lighting</li>
+          <li><i class="fas fa-check"></i> Jotjee Photo & Videography</li>
+          <li><i class="fas fa-check"></i> Full Event Management Team</li>
+          <li><i class="fas fa-check"></i> Custom Plan for Your Vision</li>
+        </ul>
+        <button class="pkg-cta" onclick="openWhatsApp('Premium Package (Rs 65,000+ Custom)')">
+          <i class="fab fa-whatsapp"></i> Book This Package
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS WE HANDLE -->
+<section id="events">
+  <div class="section-header">
+    <div class="section-eyebrow">Event Types</div>
+    <h2 class="section-title" data-en>Events We <span>Handle</span></h2>
+    <h2 class="section-title" data-np style="display:none">हामीले गर्ने <span>कार्यक्रमहरू</span></h2>
+    <div class="gold-line"></div>
+    <p class="section-sub">We have successfully handled 400+ events of all types across Sarlahi and surrounding districts.</p>
+  </div>
+
+  <div class="events-grid">
+    <div class="event-chip reveal"><i class="fas fa-ring"></i><span>Wedding</span></div>
+    <div class="event-chip reveal"><i class="fas fa-birthday-cake"></i><span>Birthday</span></div>
+    <div class="event-chip reveal"><i class="fas fa-glass-cheers"></i><span>Reception</span></div>
+    <div class="event-chip reveal"><i class="fas fa-heart"></i><span>Engagement</span></div>
+    <div class="event-chip reveal"><i class="fas fa-praying-hands"></i><span>Bratabandha</span></div>
+    <div class="event-chip reveal"><i class="fas fa-baby"></i><span>Pasni</span></div>
+    <div class="event-chip reveal"><i class="fas fa-star"></i><span>Anniversaries</span></div>
+    <div class="event-chip reveal"><i class="fas fa-users"></i><span>Corporate Events</span></div>
+    <div class="event-chip reveal"><i class="fas fa-graduation-cap"></i><span>Graduation</span></div>
+    <div class="event-chip reveal"><i class="fas fa-om"></i><span>Puja & Rituals</span></div>
+  </div>
+
+  <div style="text-align:center; margin-top: 50px;">
+    <div style="background: linear-gradient(135deg, var(--deep-purple), var(--purple-mid)); border-radius: 16px; padding: 32px 40px; display: inline-block; max-width: 700px;">
+      <div style="color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Partner Service</div>
+      <h3 style="font-family: 'Playfair Display', serif; color: white; font-size: 1.4rem; margin-bottom: 8px;">📸 Jotjee Photo & Videography</h3>
+      <p style="color: rgba(255,255,255,0.7); font-size: 0.875rem;">Our trusted photography partner — capturing your special moments in stunning quality. Available with Premium Package or as add-on.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header">
+    <div class="section-eyebrow" style="color:var(--gold)">Customer Reviews</div>
+    <h2 class="section-title" data-en>What Our <span style="color:var(--gold)">Clients Say</span></h2>
+    <h2 class="section-title" data-np style="display:none">हाम्रा <span style="color:var(--gold)">ग्राहकहरूको राय</span></h2>
+    <div class="gold-line"></div>
+    <p class="section-sub" data-en>Join 400+ happy families who trusted us with their most precious celebrations.</p>
+  </div>
+
+  <div class="reviews-slider">
+    <div class="reviews-track" id="reviewsTrack">
+      <!-- Real Reviews -->
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <div class="review-text">"Excellent decoration for our wedding! The team was professional and delivered everything on time. The stage setup was absolutely beautiful. Highly recommended!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SS</div>
+          <div>
+            <div class="reviewer-name">Shankar Sah</div>
+            <div class="reviewer-event">Wedding Ceremony · ⭐ 4.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★½</div>
+        <div class="review-text">"Amazing work by New Suraj Tent House! The catering was delicious and the decoration exceeded our expectations. Our reception event was perfect thanks to their team!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">AM</div>
+          <div>
+            <div class="reviewer-name">Arbind Mahato</div>
+            <div class="reviewer-event">Reception Event · ⭐ 4.5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <div class="review-text">"We booked them for my sister's wedding in Sarlahi. The mandap setup was traditional and gorgeous. Sound system was excellent too. Very satisfied with the service!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SD</div>
+          <div>
+            <div class="reviewer-name">Sudip Das</div>
+            <div class="reviewer-event">Wedding Ceremony · ⭐ 4.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <div class="review-text">"Perfect 5-star experience! New Suraj Tent House transformed our venue into something magical. The attention to detail, the flowers, the lights — everything was flawless!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SU</div>
+          <div>
+            <div class="reviewer-name">Shyam Upreti</div>
+            <div class="reviewer-event">Wedding & Reception · ⭐ 5.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <div class="review-text">"We've used them for two events now — a birthday party and an engagement ceremony. Both times they delivered exactly what we wanted. Great team, punctual and creative!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">NS</div>
+          <div>
+            <div class="reviewer-name">Nishant Shrestha</div>
+            <div class="reviewer-event">Birthday & Engagement · ⭐ 4.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <div class="review-text">"धर्मेन्द्र जीको टिमले हाम्रो छोराको ब्रतबन्ध कार्यक्रम एकदम राम्रो सजाइदियो। सबै मान्छेले तारिफ गरे। अर्कोपटक पनि यिनैलाई बोलाउँछौं!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">RP</div>
+          <div>
+            <div class="reviewer-name">Ram Prasad Yadav</div>
+            <div class="reviewer-event">Bratabandha · ⭐ 5.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★½</div>
+        <div class="review-text">"The DJ setup was incredible — the whole wedding dance floor was alive! Staff were friendly and helpful. Catering was tasty and served hot. Will definitely recommend to others."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">BT</div>
+          <div>
+            <div class="reviewer-name">Binita Thakur</div>
+            <div class="reviewer-event">Wedding Celebration · ⭐ 4.5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <div class="review-text">"We were amazed by the level of professionalism. They handled 200+ guests seamlessly. The stage, the food, the sound — all top-notch. New Suraj is THE best in Sarlahi!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div>
+            <div class="reviewer-name">Manoj Kumar</div>
+            <div class="reviewer-event">Grand Wedding · ⭐ 5.0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate for infinite scroll -->
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <div class="review-text">"Excellent decoration for our wedding! The team was professional and delivered everything on time. The stage setup was absolutely beautiful. Highly recommended!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SS</div>
+          <div>
+            <div class="reviewer-name">Shankar Sah</div>
+            <div class="reviewer-event">Wedding Ceremony · ⭐ 4.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★½</div>
+        <div class="review-text">"Amazing work by New Suraj Tent House! The catering was delicious and the decoration exceeded our expectations. Our reception event was perfect!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">AM</div>
+          <div>
+            <div class="reviewer-name">Arbind Mahato</div>
+            <div class="reviewer-event">Reception Event · ⭐ 4.5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <div class="review-text">"Perfect 5-star experience! New Suraj Tent House transformed our venue into something magical. The attention to detail was flawless!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SU</div>
+          <div>
+            <div class="reviewer-name">Shyam Upreti</div>
+            <div class="reviewer-event">Wedding & Reception · ⭐ 5.0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overall Rating Display -->
+  <div style="text-align:center; margin-top: 40px;">
+    <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">Overall Rating</div>
+    <div style="font-family:'Playfair Display',serif; font-size: 3.5rem; font-weight: 900; color: var(--gold); line-height:1;">4.6</div>
+    <div style="color: var(--gold); font-size: 1.3rem; margin: 4px 0;">★★★★½</div>
+    <div style="color: rgba(255,255,255,0.5); font-size: 0.82rem;">Based on 400+ events</div>
+  </div>
+</section>
+
+<!-- AVAILABILITY CALENDAR -->
+<section id="availability">
+  <div class="section-header">
+    <div class="section-eyebrow">Schedule</div>
+    <h2 class="section-title" data-en>Check <span>Availability</span></h2>
+    <h2 class="section-title" data-np style="display:none"><span>उपलब्धता</span> जाँच गर्नुहोस्</h2>
+    <div class="gold-line"></div>
+    <p class="section-sub">View our event calendar and book your preferred date before it's taken!</p>
+  </div>
+
+  <div class="avail-wrap">
+    <div class="cal-header">
+      <button class="cal-nav" onclick="changeMonth(-1)">‹</button>
+      <div class="cal-month" id="calMonthLabel">July 2026</div>
+      <button class="cal-nav" onclick="changeMonth(1)">›</button>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-days-header">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+        <div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div class="cal-days" id="calDays"></div>
+      <div class="cal-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--deep-purple)"></div> Today</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(192,57,43,0.4)"></div> Booked</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(46,204,113,0.3)"></div> Available</div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 24px;">
+      <p style="color: var(--text-gray); font-size:0.875rem; margin-bottom: 16px;">
+        <i class="fas fa-info-circle" style="color:var(--gold)"></i>
+        Call or WhatsApp to confirm your preferred date. We're open <strong>Sunday to Sunday, 7AM – 8PM</strong>.
+      </p>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:+9779815886947" class="btn-gold" style="padding:11px 24px; font-size:0.875rem;">
+          <i class="fas fa-phone"></i> 9815886947 (Ncell)
+        </a>
+        <a href="tel:+9779844032737" class="btn-outline" style="padding:10px 24px; font-size:0.875rem; color:var(--deep-purple); border-color: var(--deep-purple);">
+          <i class="fas fa-phone"></i> 9844032737 (NTC)
+        </a>
+        <a href="https://wa.me/9779815886947?text=Hello! I'd like to check availability for my event." target="_blank" class="btn-wa" style="padding:11px 24px; font-size:0.875rem;">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section id="booking">
+  <div class="section-header">
+    <div class="section-eyebrow">Book Now</div>
+    <h2 class="section-title" data-en>Book Your <span>Event</span></h2>
+    <h2 class="section-title" data-np style="display:none">आफ्नो <span>कार्यक्रम बुक</span> गर्नुहोस्</h2>
+    <div class="gold-line"></div>
+    <p class="section-sub">Fill in your details and we'll contact you within a few hours to confirm your booking!</p>
+  </div>
+
+  <div class="booking-wrap">
+    <div class="booking-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">👤 Your Full Name *</label>
+          <input type="text" class="form-input" id="bookName" placeholder="e.g. Ramesh Sharma" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">📱 Phone / WhatsApp Number *</label>
+          <input type="tel" class="form-input" id="bookPhone" placeholder="e.g. 9800000000" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">🎉 Event Type *</label>
+          <select class="form-select" id="bookEvent">
+            <option value="">-- Select Event Type --</option>
+            <option>Wedding Ceremony</option>
+            <option>Wedding Reception</option>
+            <option>Birthday Party</option>
+            <option>Engagement Ceremony</option>
+            <option>Bratabandha</option>
+            <option>Pasni Ceremony</option>
+            <option>Anniversary Celebration</option>
+            <option>Corporate Event</option>
+            <option>Puja / Religious Ritual</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">📅 Event Date *</label>
+          <input type="date" class="form-input" id="bookDate">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">💎 Package Preference</label>
+          <select class="form-select" id="bookPackage">
+            <option value="">-- Select Package --</option>
+            <option>Basic (Rs 15,000 – 30,000)</option>
+            <option>Standard (Rs 35,000 – 60,000)</option>
+            <option>Premium (Rs 65,000+ Custom)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">👥 Estimated Guests</label>
+          <select class="form-select" id="bookGuests">
+            <option>Under 50 guests</option>
+            <option>50 – 100 guests</option>
+            <option>100 – 200 guests</option>
+            <option>200 – 500 guests</option>
+            <option>500+ guests</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label class="form-label">📍 Event Location / Venue</label>
+          <input type="text" class="form-input" id="bookLocation" placeholder="e.g. Harion Bazaar, Sarlahi">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label class="form-label">💬 Special Requirements / Message</label>
+          <textarea class="form-textarea" id="bookMessage" placeholder="Tell us about your event, special requirements, theme preferences..."></textarea>
+        </div>
+      </div>
+      <div class="form-submit">
+        <button class="submit-btn wa" onclick="sendToWhatsApp()">
+          <i class="fab fa-whatsapp"></i> Send via WhatsApp
+        </button>
+        <a href="tel:+9779815886947" class="submit-btn call" style="text-decoration:none">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+        <button class="submit-btn primary" onclick="sendEmail()">
+          <i class="fas fa-envelope"></i> Send Inquiry
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-title" data-en>Find & <span>Contact Us</span></h2>
+    <h2 class="section-title" data-np style="display:none">हाम्रो <span>सम्पर्क</span></h2>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="contact-grid">
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="info-text">
+          <div class="label">Address</div>
+          <div class="val">Harion-11, Sarlahi</div>
+          <div class="sub">Mahesh Province, Nepal</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="info-text">
+          <div class="label">Phone & WhatsApp</div>
+          <div class="val"><a href="tel:+9779815886947">9815886947</a> (Ncell)</div>
+          <div class="val"><a href="tel:+9779844032737">9844032737</a> (NTC)</div>
+          <div class="sub">Both numbers on WhatsApp</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+        <div class="info-text">
+          <div class="label">Email</div>
+          <div class="val"><a href="mailto:newsurajtenthouse@gmail.com">newsurajtenthouse@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-clock"></i></div>
+        <div class="info-text">
+          <div class="label">Business Hours</div>
+          <div class="val">Sunday – Sunday</div>
+          <div class="sub">7:00 AM – 8:00 PM (Every day)</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-truck"></i></div>
+        <div class="info-text">
+          <div class="label">Service Area</div>
+          <div class="val">Sarlahi District & Beyond</div>
+          <div class="sub">Wherever our vehicles can reach in Nepal</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="info-text">
+          <div class="label">Social Media</div>
+          <div class="val"><a href="https://www.facebook.com/share/17uuBbbAAG/" target="_blank">Facebook Page</a> · <a href="https://youtube.com/@new_suraj_tent_house32?si=of2OOEsD3Ur_MomW" target="_blank">YouTube Channel</a></div>
+          <div class="sub">Follow for event highlights & updates</div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+        <a href="https://wa.me/9779815886947?text=Hello! I want to book your services." target="_blank" class="btn-wa" style="flex:1; min-width:140px; justify-content:center; padding:13px 16px; border-radius:10px; font-size:0.875rem;">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="tel:+9779815886947" class="btn-gold" style="flex:1; min-width:140px; justify-content:center; padding:13px 16px; border-radius:10px; font-size:0.875rem;">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+        <a href="https://maps.app.goo.gl/6jpRvrhXcFV4jBBo8" target="_blank" class="btn-outline" style="flex:1; min-width:140px; justify-content:center; padding:12px 16px; border-radius:10px; font-size:0.875rem; color:var(--deep-purple); border-color:var(--deep-purple);">
+          <i class="fas fa-directions"></i> Directions
+        </a>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=Harion+Sarlahi+Nepal&output=embed&z=14"
+        allowfullscreen
+        loading="lazy"
+        title="New Suraj Tent House Location"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL BAND -->
+<div class="social-band">
+  <h2 class="social-title">🌸 Follow Our Journey</h2>
+  <p class="social-sub">See our latest events, decorations and behind-the-scenes on social media!</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/17uuBbbAAG/" target="_blank" class="social-link fb-link">
+      <i class="fab fa-facebook-f"></i> Facebook Page
+    </a>
+    <a href="https://youtube.com/@new_suraj_tent_house32?si=of2OOEsD3Ur_MomW" target="_blank" class="social-link yt-link">
+      <i class="fab fa-youtube"></i> YouTube Channel
+    </a>
+    <a href="https://wa.me/9779815886947" target="_blank" class="social-link wa-link">
+      <i class="fab fa-whatsapp"></i> WhatsApp Us
+    </a>
+    <a href="mailto:newsurajtenthouse@gmail.com" class="social-link mail-link">
+      <i class="fas fa-envelope"></i> Email Us
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-icon" style="margin-bottom:12px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🌸</div>
+      <div class="name">New Suraj Tent House & Rental Services</div>
+      <div class="slogan">✨ Turning Moments into Memories</div>
+      <p>Sarlahi's trusted event planning, wedding decoration & rental service since 2014. Serving 400+ happy families across Nepal.</p>
+      <div style="margin-top:16px; display:flex; gap:10px;">
+        <a href="https://www.facebook.com/share/17uuBbbAAG/" target="_blank" style="color:rgba(255,255,255,0.5); font-size:1.1rem; transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com/@new_suraj_tent_house32" target="_blank" style="color:rgba(255,255,255,0.5); font-size:1.1rem; transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/9779815886947" target="_blank" style="color:rgba(255,255,255,0.5); font-size:1.1rem; transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:newsurajtenthouse@gmail.com" style="color:rgba(255,255,255,0.5); font-size:1.1rem; transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Wedding Stage Setup</a></li>
+        <li><a href="#services">Mandap Decoration</a></li>
+        <li><a href="#services">DJ & Sound System</a></li>
+        <li><a href="#services">Catering Services</a></li>
+        <li><a href="#services">Birthday Party Setup</a></li>
+        <li><a href="#services">Rental Equipment</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#availability">Availability</a></li>
+        <li><a href="#booking">Book Now</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+9779815886947"><i class="fas fa-phone" style="width:14px"></i> 9815886947 (Ncell)</a></li>
+        <li><a href="tel:+9779844032737"><i class="fas fa-phone" style="width:14px"></i> 9844032737 (NTC)</a></li>
+        <li><a href="mailto:newsurajtenthouse@gmail.com"><i class="fas fa-envelope" style="width:14px"></i> Email Us</a></li>
+        <li><a href="https://maps.app.goo.gl/6jpRvrhXcFV4jBBo8" target="_blank"><i class="fas fa-map-marker-alt" style="width:14px"></i> Harion-11, Sarlahi</a></li>
+        <li><a href="#"><i class="fas fa-clock" style="width:14px"></i> 7AM – 8PM Daily</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2024 New Suraj Tent House & Rental Services. All rights reserved. Harion-11, Sarlahi, Mahesh Province.</span>
+    <span>Owner: Dharmendra Chaudhary | Est. 2014 A.D.</span>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-buttons">
+  <a href="https://wa.me/9779815886947?text=Hello! I want to know about your event services." target="_blank" class="float-btn float-wa" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+9779815886947" class="float-btn float-call" title="Call Now">
+    <i class="fas fa-phone"></i>
+  </a>
+  <a href="#home" class="float-btn float-top" title="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+</div>
+
+<script>
+// ===== LOADER =====
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const loader = document.getElementById('loader');
+    loader.style.opacity = '0';
+    setTimeout(() => loader.style.display = 'none', 600);
+  }, 1800);
+});
+
+// ===== PETALS =====
+function createPetals() {
+  const container = document.getElementById('petals');
+  const emojis = ['🌸','🌺','🌹','✨','💫','🌼'];
+  for(let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    p.style.cssText = `
+      left: ${Math.random()*100}%;
+      font-size: ${0.8 + Math.random()*1.2}rem;
+      animation-duration: ${5 + Math.random()*8}s;
+      animation-delay: ${Math.random()*6}s;
+    `;
+    container.appendChild(p);
+  }
+}
+createPetals();
+
+// ===== COUNTER ANIMATION =====
+function animateCounter(id, target, suffix='') {
+  const el = document.getElementById(id);
+  let current = 0;
+  const increment = target / 60;
+  const timer = setInterval(() => {
+    current += increment;
+    if(current >= target) { current = target; clearInterval(timer); }
+    el.textContent = Math.floor(current) + suffix;
+  }, 25);
+}
+setTimeout(() => {
+  animateCounter('cnt1', 400, '+');
+  animateCounter('cnt2', 12, '+');
+  animateCounter('cnt3', 160, '+');
+}, 2000);
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,0.5)' : '0 2px 20px rgba(0,0,0,0.4)';
+});
+
+// ===== MOBILE MENU =====
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('#mobileMenu') && !e.target.closest('#hamburger')) {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+});
+
+// ===== LANGUAGE =====
+function setLang(lang) {
+  document.body.className = lang === 'np' ? 'nepali' : '';
+  document.getElementById('btnEn').className = lang === 'en' ? 'lang-btn active' : 'lang-btn';
+  document.getElementById('btnNp').className = lang === 'np' ? 'lang-btn active' : 'lang-btn';
+}
+
+// ===== SCROLL REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if(e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ===== GALLERY FILTER =====
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    const show = cat === 'all' || item.dataset.cat === cat;
+    item.style.display = show ? 'block' : 'none';
+  });
+}
+
+// ===== CALENDAR =====
+let calYear = 2026, calMonth = 6; // July 2026 (0-indexed)
+const bookedDates = [2,7,8,14,15,21,22,27,28]; // Example booked dates
+
+const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function renderCalendar() {
+  document.getElementById('calMonthLabel').textContent = `${monthNames[calMonth]} ${calYear}`;
+  const container = document.getElementById('calDays');
+  container.innerHTML = '';
+  const firstDay = new Date(calYear, calMonth, 1).getDay();
+  const daysInMonth = new Date(calYear, calMonth+1, 0).getDate();
+  const today = new Date();
+
+  for(let i=0; i<firstDay; i++) {
+    const d = document.createElement('div');
+    d.className = 'cal-day empty';
+    container.appendChild(d);
+  }
+  for(let d=1; d<=daysInMonth; d++) {
+    const el = document.createElement('div');
+    el.className = 'cal-day';
+    el.textContent = d;
+    const isToday = today.getDate()===d && today.getMonth()===calMonth && today.getFullYear()===calYear;
+    if(isToday) el.classList.add('today');
+    else if(bookedDates.includes(d)) el.classList.add('booked');
+    else el.classList.add('available');
+    el.onclick = () => {
+      if(!el.classList.contains('booked')) {
+        document.getElementById('bookDate').value = `${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        document.getElementById('booking').scrollIntoView({behavior:'smooth'});
+      }
+    };
+    container.appendChild(el);
+  }
+}
+function changeMonth(dir) {
+  calMonth += dir;
+  if(calMonth > 11) { calMonth=0; calYear++; }
+  if(calMonth < 0) { calMonth=11; calYear--; }
+  renderCalendar();
+}
+renderCalendar();
+
+// ===== WHATSAPP BOOKING =====
+function sendToWhatsApp() {
+  const name = document.getElementById('bookName').value || 'Not specified';
+  const phone = document.getElementById('bookPhone').value || 'Not specified';
+  const event = document.getElementById('bookEvent').value || 'Not specified';
+  const date = document.getElementById('bookDate').value || 'Not specified';
+  const pkg = document.getElementById('bookPackage').value || 'Not specified';
+  const guests = document.getElementById('bookGuests').value || 'Not specified';
+  const location = document.getElementById('bookLocation').value || 'Not specified';
+  const message = document.getElementById('bookMessage').value || '';
+
+  const text = `🌸 *New Booking Inquiry*\n\n` +
+    `👤 *Name:* ${name}\n` +
+    `📱 *Phone:* ${phone}\n` +
+    `🎉 *Event Type:* ${event}\n` +
+    `📅 *Event Date:* ${date}\n` +
+    `💎 *Package:* ${pkg}\n` +
+    `👥 *Guests:* ${guests}\n` +
+    `📍 *Venue/Location:* ${location}\n` +
+    (message ? `💬 *Message:* ${message}\n` : '') +
+    `\n_Sent from Website – New Suraj Tent House_`;
+
+  window.open(`https://wa.me/9779815886947?text=${encodeURIComponent(text)}`, '_blank');
+
+  const n = document.getElementById('notif');
+  n.style.display = 'block';
+  setTimeout(() => n.style.display = 'none', 3000);
+}
+
+function openWhatsApp(pkg) {
+  const text = `Hello! I'm interested in your *${pkg}*. Please share more details about your services and availability.`;
+  window.open(`https://wa.me/9779815886947?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+function sendEmail() {
+  const name = document.getElementById('bookName').value;
+  const event = document.getElementById('bookEvent').value;
+  const date = document.getElementById('bookDate').value;
+  const msg = document.getElementById('bookMessage').value;
+  const subject = `Event Booking Inquiry – ${event || 'Event'}`;
+  const body = `Name: ${name}\nEvent: ${event}\nDate: ${date}\n\nMessage: ${msg}`;
+  window.location.href = `mailto:newsurajtenthouse@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// ===== SMOOTH SCROLL for nav links =====
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
